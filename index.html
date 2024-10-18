@@ -1,83 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdvanceU - Coming Soon</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultural Commons Framework - Coming Soon</title>
     <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
-            overflow: hidden;
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff;
+        overflow: hidden;
+      }
+      .container {
+        text-align: center;
+        animation: fadeIn 2s ease-out;
+        padding: 20px;
+      }
+      .logo {
+        margin-bottom: 20px;
+        animation: bounce 2s infinite;
+      }
+      .coming-soon {
+        font-size: 3em;
+        margin: 10px 0;
+        animation: fadeInUp 1s ease-out;
+      }
+      .message {
+        font-size: 1.2em;
+        color: #f0f0f0;
+        animation: fadeInUp 1.5s ease-out;
+      }
+      .tenets {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 800px;
+        animation: fadeInUp 2s ease-out;
+      }
+      .tenet {
+        width: 150px;
+        margin: 15px;
+        text-align: center;
+      }
+      .tenet svg {
+        margin-bottom: 10px;
+      }
+      .tenet-desc {
+        white-space: nowrap;
+      }
+      .tenet-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .intro-link {
+        margin-top: 40px;
+        animation: fadeInUp 2.5s ease-out;
+      }
+      .intro-link a {
+        color: #ffeb3b;
+        text-decoration: none;
+        font-size: 1.1em;
+        border-bottom: 1px solid #ffeb3b;
+        padding-bottom: 2px;
+      }
+      .intro-link a:hover {
+        color: #fff;
+        border-color: #fff;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-        .container {
-            text-align: center;
-            animation: fadeIn 2s ease-out;
+        to {
+          opacity: 1;
         }
-        .logo {
-            margin-bottom: 20px;
-            animation: bounce 2s infinite;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        .coming-soon {
-            font-size: 3em;
-            margin: 10px 0;
-            animation: fadeInUp 1s ease-out;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        .message {
-            font-size: 1.2em;
-            color: #f0f0f0;
-            animation: fadeInUp 1.5s ease-out;
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        40% {
+          transform: translateY(-20px);
         }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        60% {
+          transform: translateY(-10px);
         }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-20px);
-            }
-            60% {
-                transform: translateY(-10px);
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- SVG Logo or Icon -->
-        <div class="logo">
-            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="2" fill="#4CAF50"/>
-                <path d="M12 6v6h4" stroke="#fff" stroke-width="2"/>
-            </svg>
+      <!-- Updated SVG Logo -->
+      <div class="logo">
+        <svg
+          width="120"
+          height="120"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Circle representing the globe/community -->
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            stroke="#fff"
+            stroke-width="5"
+            fill="none"
+          />
+          <!-- Nodes representing data points -->
+          <circle cx="30" cy="30" r="5" fill="#fff" />
+          <circle cx="70" cy="30" r="5" fill="#fff" />
+          <circle cx="30" cy="70" r="5" fill="#fff" />
+          <circle cx="70" cy="70" r="5" fill="#fff" />
+          <!-- Lines connecting the nodes -->
+          <line
+            x1="30"
+            y1="30"
+            x2="70"
+            y2="30"
+            stroke="#fff"
+            stroke-width="2"
+          />
+          <line
+            x1="70"
+            y1="30"
+            x2="70"
+            y2="70"
+            stroke="#fff"
+            stroke-width="2"
+          />
+          <line
+            x1="70"
+            y1="70"
+            x2="30"
+            y2="70"
+            stroke="#fff"
+            stroke-width="2"
+          />
+          <line
+            x1="30"
+            y1="70"
+            x2="30"
+            y2="30"
+            stroke="#fff"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+
+      <!-- Main Message -->
+      <div class="coming-soon">Coming Soon</div>
+      <div class="message">
+        Building a collaborative framework for cultural commons
+      </div>
+
+      <!-- Tenets Section -->
+      <div class="tenets">
+        <!-- Privacy -->
+        <div class="tenet">
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"
+            />
+            <path d="M12 11v2" />
+            <path d="M12 15h.01" />
+          </svg>
+          <div class="tenet-title">Privacy</div>
+          <div class="tenet-desc">Anonymity & Control</div>
         </div>
 
-        <!-- Main Message -->
-        <div class="coming-soon">Coming Soon</div>
-        <div class="message">Helping your data to work for you</div>
+        <!-- Attribution -->
+        <div class="tenet">
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="7" r="4" />
+            <path
+              d="M5.5 21h13a2 2 0 0 0 2-2v-1a7 7 0 0 0-7-7h-3a7 7 0 0 0-7 7v1a2 2 0 0 0 2 2z"
+            />
+          </svg>
+          <div class="tenet-title">Attribution</div>
+          <div class="tenet-desc">Flexible Identity</div>
+        </div>
+
+        <!-- Reputation -->
+        <div class="tenet">
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 21l6-5 6 5V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2z" />
+          </svg>
+          <div class="tenet-title">Reputation</div>
+          <div class="tenet-desc">Reflect Perspectives</div>
+        </div>
+
+        <!-- Collaboration -->
+        <div class="tenet">
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <path d="M8.59 13.51L15.42 17.49" />
+            <path d="M15.41 6.51L8.59 10.49" />
+          </svg>
+          <div class="tenet-title">Collaboration</div>
+          <div class="tenet-desc">Shared Contributions</div>
+        </div>
+      </div>
+
+      <!-- Intro Blog Post Link -->
+      <div class="intro-link">
+        <a
+          href="https://zanestarr.substack.com/p/summer-of-research-data-curation"
+          target="_blank"
+        >
+          Read our introductory blog post
+        </a>
+      </div>
     </div>
-</body>
+  </body>
 </html>
