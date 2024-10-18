@@ -14,12 +14,16 @@
         min-height: 100vh;
         background: linear-gradient(135deg, #6a11cb, #2575fc);
         color: #fff;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
       }
       .container {
         text-align: center;
         animation: fadeIn 2s ease-out;
         padding: 20px;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-bottom: 60px; /* Add padding to the bottom */
       }
       .logo {
         margin-bottom: 20px;
@@ -104,6 +108,47 @@
         }
         60% {
           transform: translateY(-10px);
+        }
+      }
+      @media (max-width: 600px) {
+        body {
+          align-items: flex-start;
+          padding-top: 20px;
+        }
+        .container {
+          padding-bottom: 80px; /* Increase bottom padding for mobile */
+        }
+        .logo {
+          margin-bottom: 10px;
+        }
+        .coming-soon {
+          font-size: 2.5em;
+        }
+        .message {
+          font-size: 1em;
+        }
+        .tenets {
+          margin-top: 20px;
+          max-width: 400px;
+        }
+        .tenet {
+          width: 120px;
+          margin: 10px;
+        }
+        .tenet svg {
+          margin-bottom: 5px;
+        }
+        .tenet-desc {
+          white-space: normal;
+        }
+        .tenet-title {
+          margin-bottom: 3px;
+        }
+        .intro-link {
+          margin-top: 30px;
+        }
+        .intro-link a {
+          font-size: 1em;
         }
       }
     </style>
